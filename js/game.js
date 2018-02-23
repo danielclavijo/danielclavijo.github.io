@@ -100,24 +100,31 @@ var gameState = {
 
     },
     saveScore: function(){
-        var scores = localStorage.highScores.split("#");
+        var scores = "";
+        if(localStorage.highScores)
+            scores = localStorage.highScores.split("#");
 
         if(localStorage.highScores){
                 if(localStorage.highScores.indexOf(user) == -1){
                     localStorage.highScores = localStorage.highScores +  user + ": " + (game.global.playerRad - 40) + "#";
                 } else{
-
+                    //WIP
                 }
             }else{
                 localStorage.highScores = user + ": " + (game.global.playerRad - 40) + "#";
         }
     },
     showScore: function(){
-        var scores = localStorage.highScores.split("#");
+        var scores = "";
+        if(localStorage.highScores)
+            scores = localStorage.highScores.split("#");
+
         scores.splice(-1, 1);
 
         $(document).ready(function(){$("#scoreBoard").show();});
 
+        $(document).ready(function(){$("#scoreBoard").html("");});
+        $("#scoreBoard").append("<h2>Scores</h2>");
         for(var i = 0; i < scores.length; i++){
             $("#scoreBoard").append("<p>" + (i+1) + "- " + scores[i] +"</p>");
         }
