@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="DallOner" />
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Ball eater</title>
+
+    </head>
+
+    <body>
+        <div id="loginForm">
+                <label for="user">Usuario: </label>
+                <input  type="text" id="user" class="form-input"/>
+                <br>
+
+                <label for="password">Contraseña: </label>
+                <input type="password" id="password" class="form-input"/>
+                <br>
+
+                <button id="login">Login</button>
+                <button id="signup">Registro</button>
+
+        </div>
+        <div id="scoreBoard"><h2>Scores</h2></div>
+
+        <div id="gameContainer"></div>
+
+
+        <script type="text/javascript" src="lib/phaser.min.js"></script>
+        <script type="text/javascript" src="lib/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="js/boot.js"></script>
+        <script type="text/javascript" src="js/load.js"></script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/game.js"></script>
+        <script type="text/javascript" src="js/stateManager.js"></script>
+        <script type="text/javascript" src="js/phaser-touch-control.js"></script>
+        <script type="text/javascript" src="js/sprites/playerBall.js"></script>
+        <script type="text/javascript" src="js/sprites/enemyBall.js"></script>
+
+        <script type="text/javascript" src="plugins/phaser-debug.js"></script>
+        <script type="text/javascript" src="plugins/phaser-inspector.min.js"></script>
+        <script type="text/javascript" src="plugins/phaser-super-storage.min.js"></script>
+        <script type="text/javascript" src="plugins/phaser-input.min.js"></script>
+
+    </body>
+
+</html>
