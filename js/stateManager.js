@@ -24,6 +24,8 @@ document.getElementById("login").addEventListener("click",function(){
         }else{
             alert("Datos incorrectos");
         }
+    }else{
+        alert("Introduzca su login");
     }
 });
 
